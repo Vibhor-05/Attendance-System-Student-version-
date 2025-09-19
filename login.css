@@ -1,0 +1,161 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Login Container */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-header h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-header p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Role Selector Tabs */
+.role-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tab-link {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-link:hover {
+    background-color: #f0f0f0;
+}
+
+.tab-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Login Forms */
+.login-form {
+    display: none; /* Hide forms by default */
+}
+
+.login-form.active-form {
+    display: block; /* Show active form */
+}
+
+.login-form h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Important for padding */
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* NEW: Form Actions Container */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px; /* Added margin for spacing */
+}
+
+/* NEW: Forgot Password Link Styling */
+.forgot-password {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+    width: auto;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #218838;
+}
+
+/* ADDED: Admin Login Link Styles */
+.admin-login-link {
+    text-align: left;
+    margin-top: 25px; /* Space above the link */
+    padding-top: 15px; /* Space between the border and the link */
+    border-top: 1px solid #eee; /* A subtle separator line */
+}
+
+.admin-login-link a {
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.admin-login-link a:hover {
+    color: #007bff; /* Highlight color on hover */
+    text-decoration: underline;
+}

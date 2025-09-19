@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Attendance System</h2>
+            <p id="welcome-message">Student Portal</p>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-section="profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link active" data-section="attendance">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>View Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-section="report">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Report Attendance</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Profile Section -->
+        <div class="content-section" id="profile">
+            <div class="content-header">
+                <h1>Student Profile</h1>
+                <p>View and manage your personal information</p>
+            </div>
+            
+            <div class="card">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img id="profile-image" src="https://picsum.photos/seed/student123/180/180.jpg" alt="Student Photo">
+                    </div>
+                    <div class="profile-details">
+                        <div class="detail-row">
+                            <div class="detail-label">Name:</div>
+                            <div class="detail-value" id="profile-name">John Doe</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Roll Number:</div>
+                            <div class="detail-value" id="profile-roll">CS231100</div>
+                            
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Year:</div>
+                            <div class="detail-value">3rd Year</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Course:</div>
+                            <div class="detail-value">B.Tech Computer Science</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Section:</div>
+                            <div class="detail-value">A</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Phone Number:</div>
+                            <div class="detail-value">+91 9876543210</div>
+                        </div>
+                        <div class="detail-row">
+                            <div class="detail-label">Email ID:</div>
+                            <div class="detail-value">john.doe@example.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Attendance Section -->
+        <div class="content-section active" id="attendance">
+            <div class="content-header">
+                <h1>Attendance Overview</h1>
+                <p>View your attendance statistics and details</p>
+            </div>
+            
+            <!-- Attendance Stats -->
+            <div class="stats-container">
+                <div class="stat-card overall">
+                    <div class="stat-value">87%</div>
+                    <div class="stat-label">Overall Attendance</div>
+                </div>
+                <div class="stat-card present">
+                    <div class="stat-value">156</div>
+                    <div class="stat-label">Days Present</div>
+                </div>
+                <div class="stat-card absent">
+                    <div class="stat-value">23</div>
+                    <div class="stat-label">Days Absent</div>
+                </div>
+            </div>
+            
+            <!-- Subject-wise Attendance -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Subject-wise Attendance</h3>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Classes Attended</th>
+                                <th>Total Classes</th>
+                                <th>Attendance %</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Data Structures</td>
+                                <td>28</td>
+                                <td>30</td>
+                                <td>93%</td>
+                                <td><span style="color: var(--success-color);">Good</span></td>
+                            </tr>
+                            <tr>
+                                <td>Algorithms</td>
+                                <td>25</td>
+                                <td>30</td>
+                                <td>83%</td>
+                                <td><span style="color: var(--warning-color);">Average</span></td>
+                            </tr>
+                            <tr>
+                                <td>Database Systems</td>
+                                <td>22</td>
+                                <td>30</td>
+                                <td>73%</td>
+                                <td><span style="color: var(--danger-color);">Low</span></td>
+                            </tr>
+                            <tr>
+                                <td>Web Development</td>
+                                <td>27</td>
+                                <td>30</td>
+                                <td>90%</td>
+                                <td><span style="color: var(--success-color);">Good</span></td>
+                            </tr>
+                            <tr>
+                                <td>Operating Systems</td>
+                                <td>26</td>
+                                <td>30</td>
+                                <td>87%</td>
+                                <td><span style="color: var(--success-color);">Good</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Day-wise Attendance -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Day-wise Attendance</h3>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Day</th>
+                                <th>Data Structures</th>
+                                <th>Algorithms</th>
+                                <th>Database Systems</th>
+                                <th>Web Development</th>
+                                <th>Operating Systems</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15/10/2023</td>
+                                <td>Monday</td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-times-circle" style="color: var(--danger-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>14/10/2023</td>
+                                <td>Sunday</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>13/10/2023</td>
+                                <td>Saturday</td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>12/10/2023</td>
+                                <td>Friday</td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-times-circle" style="color: var(--danger-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>11/10/2023</td>
+                                <td>Thursday</td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-times-circle" style="color: var(--danger-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                                <td><i class="fas fa-check-circle" style="color: var(--success-color);"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Report Attendance Section -->
+        <div class="content-section" id="report">
+            <div class="content-header">
+                <h1>Report Attendance Issue</h1>
+                <p>Report any discrepancies in your attendance records</p>
+            </div>
+            
+            <div class="card">
+                <form id="attendance-report-form">
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Subject</label>
+                        <select class="form-control" id="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="Data Structures">Data Structures</option>
+                            <option value="Algorithms">Algorithms</option>
+                            <option value="Database Systems">Database Systems</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Operating Systems">Operating Systems</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="date">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-control" id="message" placeholder="Describe the attendance issue..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Submit Report</button>
+                </form>
+                
+                <div id="report-message" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="attendance.js"></script>
+</body>
+</html>
